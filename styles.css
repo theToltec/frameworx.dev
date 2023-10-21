@@ -199,6 +199,8 @@ body {
   text-align: center;
   color: white;
   margin-top: 8em;
+  transform: translateY(-500%); /* Start off-screen */
+  animation: slide-in 1s ease forwards;
 }
 
 #projects-hr {
@@ -208,6 +210,19 @@ body {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  transform: translateX(-500%); /* Start off-screen */
+  animation: slide-in 1s ease forwards;
+}
+
+#projects-hr2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 60%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  transform: translateX(500%); /* Start off-screen */
+  animation: slide-in 1s ease forwards;
 }
 
 #projects-container {
@@ -236,14 +251,35 @@ body {
   box-shadow: 4px 4px 8px #fe2085;
   border-radius: 20px;
   border-style: solid;
+  transform: translateX(500%); /* Start off-screen */
+  animation: slide-in 1s ease forwards;
 }
 
-.project-box img {
+.project-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 900px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(at 50% 80%, rgba(0, 225, 244, 0.15), rgba(255, 255, 255, 0));
+  border: outset rgba(0,0,0,0.5);
+  box-shadow: 4px 4px 8px #fe2085;
+  border-radius: 20px;
+  border-style: solid;
+  transform: translateX(-500%); /* Start off-screen */
+  animation: slide-in 1s ease forwards;
+}
+
+.project-box img,
+.project-box2 img {
   border-radius: 20px 20px 0px 0px;
   vertical-align: middle;
 }
 
-.project-box h3 {
+.project-box h3,
+.project-box2 h3 {
   text-align: center;
   font-size: 200%;
   margin-bottom: 15px;
@@ -253,7 +289,8 @@ body {
   -webkit-text-fill-color: transparent;
 } 
 
-.project-box:hover {
+.project-box:hover,
+.project-box2:hover {
   background-color: rgba(105, 105, 105, 0.295);
 }
 /* PROJECTS End */
